@@ -1,0 +1,34 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("Lütfen saati tam sayı olarak girin : ");
+
+
+            string saat1 = Console.ReadLine();
+
+            int saat;
+
+            if (Int32.TryParse(saat1, out saat))
+            {
+                saat = Convert.ToInt32(saat1);
+                if (saat < 0 || saat > 24)
+                {
+                    Console.WriteLine("Tekrar başlayın ve 24 saat diliminden girin.");
+                }
+                else if (saat < 6 || saat >= 22)
+                    Console.WriteLine("İyi Geceler");
+
+                else if (saat < 10)
+                    Console.WriteLine("Günaydın");
+
+                else if (saat < 17)
+                    Console.WriteLine("İyi günler");
+                else if (saat < 22)
+                    Console.WriteLine("İyi Akşamlar");
+                else { }
+            }
+            else {
+                Console.WriteLine("Tekrar başlayın ve saati tam sayı olarak girin.");
+
+            }
+
+        }
