@@ -1,0 +1,44 @@
+static void Main(string[] args)
+        {
+            string e, b;
+
+            Console.WriteLine("En girin");
+            e = Console.ReadLine();
+            int k = Int32.Parse(e);
+
+            Console.WriteLine("Boy girin");
+            b = Console.ReadLine();
+            int u = Int32.Parse(b);
+
+            if (k < u)
+            {
+                int cevre = Çevre(k, u);
+                Console.WriteLine("Çevre: " + cevre);
+
+                int alan = Alan(k, u);
+                Console.WriteLine("Alan: " + alan);
+
+            }
+
+            else
+
+                Console.WriteLine("En,Boy'dan küçük olmalı.Lütfen tekrar deneyin.");
+
+
+            int Çevre(int m, int n)
+            {
+
+                int x = m * 2 + n * 2;
+                return x;
+            }
+
+            int Alan(int m, int n)
+            {
+
+                int x = m * n;
+                return x;
+
+            }
+
+
+        }
