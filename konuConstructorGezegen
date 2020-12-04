@@ -1,0 +1,70 @@
+using System;
+
+namespace konuConstructorGezegen
+{
+    class Gezegen
+    {
+        public static int yarıÇap;
+        public static double yerÇekimi;
+        private static string ad;
+        private static int sayaç;
+
+        public Gezegen(int r, double g, string n)
+        {
+        yarıÇap=r;
+        yerÇekimi=g;
+        ad = n;
+        sayaç++;
+        }
+        public string adYaz()
+        {
+            return ad;
+        }
+        public int yarıçapYaz()
+        {
+            return yarıÇap;
+        }
+        public double yerÇekimiYaz()
+        {
+            return yerÇekimi;
+        }
+
+        public static int GezegenSay()
+        {
+        return sayaç;
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Gezegen earth = new Gezegen(6378, 9.81, "Earth");
+            Console.WriteLine("Gezegen Adı : " + earth.adYaz() + " , Yarıçapı : " + earth.yarıçapYaz() + " km , Yer Çekimi : " + earth.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen saturn = new Gezegen(60268, 8.96, "Saturn");
+            Console.WriteLine("Gezegen Adı : " + saturn.adYaz() + " , Yarıçapı : " + saturn.yarıçapYaz() + " km , Yer Çekimi : " + saturn.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen mars = new Gezegen(3389, 3.71, "Mars");
+            Console.WriteLine("Gezegen Adı : " + mars.adYaz() + " , Yarıçapı : " + mars.yarıçapYaz() + " km , Yer Çekimi : " + mars.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen venus = new Gezegen(6052, 8.87, "Venus");
+            Console.WriteLine("Gezegen Adı : " + venus.adYaz() + " , Yarıçapı : " + venus.yarıçapYaz() + " km , Yer Çekimi : " + venus.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen neptun = new Gezegen(24622, 11.15, "Neptun");
+            Console.WriteLine("Gezegen Adı : " + neptun.adYaz() + " , Yarıçapı : " + neptun.yarıçapYaz() + " km , Yer Çekimi : " + neptun.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen pluton = new Gezegen(1118, 0.62, "Pluton");
+            Console.WriteLine("Gezegen Adı : " + pluton.adYaz() + " , Yarıçapı : " + pluton.yarıçapYaz() + " km , Yer Çekimi : " + pluton.yerÇekimiYaz() + " m/sn²");
+
+            Gezegen uranus = new Gezegen(25362, 8.87, "Uranus");
+            Console.WriteLine("Gezegen Adı : " + uranus.adYaz() + " , Yarıçapı : " + uranus.yarıçapYaz() + " km , Yer Çekimi : " + uranus.yerÇekimiYaz() + " m/sn²");
+
+
+
+            Console.WriteLine("Gezegen Sayısı : " + Gezegen.GezegenSay());
+
+
+        }
+    }
+}
